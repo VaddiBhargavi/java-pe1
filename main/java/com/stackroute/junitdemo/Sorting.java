@@ -24,14 +24,14 @@ public class Sorting {
             if(remainder % 2 ==0)
                 sum = sum + remainder;
         }
-
+// checks for the even digits sum
         int intArr[]= new int[count];
         for(int i=0; temp > 0; i++)
         {
             intArr[i] = temp%10;
             temp = temp/10;
         }
-
+//Swaps the digits in non-increasing order
         for(int i=0; i < count; i++)
         {
             for(int j=i; j < count; j++)

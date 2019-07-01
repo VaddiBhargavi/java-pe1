@@ -20,17 +20,16 @@ public class Palindrome {
                 result += sum;
                 return result.trim();
             }
-            //System.out.println(temp + "-is palindrome and sum of even numbers is greater than 25 ::" + sum+"-success");
             else {
                 result += sum;
                 return result.trim();
             }
-        }  //System.out.println(temp + "-is palindrome and sum of even numbers is less than 25::" + sum+"-failure");
+        }
         else {
             //Prints the GivenNumber is not palindrome
             result += "Not palindrome";
             return result.trim();
-            // System.out.println("The given number is not a palindrome");
+
         }
     }
 }
