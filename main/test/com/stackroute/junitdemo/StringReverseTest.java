@@ -6,32 +6,31 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class String_ReverseTest {
-    String_Reverse string_reverse;
+public class StringReverseTest {
+    StringReverse stringreverse;
     @Before
     public void setUp(){
-        System.out.println("Before");
-        string_reverse= new String_Reverse();
+        //System.out.println("Before");
+        stringreverse= new StringReverse();
     }
     @After
 public void tearDown(){
-
-    System.out.println("After");
-    string_reverse=null;
+   // System.out.println("After");
+    stringreverse=null;
 }
 @Test
-public void reverseOfAString(){
-        String result=String_Reverse.reverseString("Bhargavi");
+public void givenInputShouldReturnReverse(){
+        String result= StringReverse.reverseString("Bhargavi");
         assertEquals("ivagrahB",result);
 }
 @Test
     public void givenInputStringEmptyPrintErrorMessage(){
-        String result=String_Reverse.reverseString(" ");
+        String result= StringReverse.reverseString(" ");
         assertEquals("Error",result);
     }
     @Test
     public void givenInputNullPrintAsNull(){
-        String result= String_Reverse.reverseString(null);
+        String result= StringReverse.reverseString(null);
         assertEquals("Returns null", result);
     }
 }

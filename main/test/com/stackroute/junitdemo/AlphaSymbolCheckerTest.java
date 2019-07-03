@@ -6,36 +6,41 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class Alpha_SymbolTest {
-    Alpha_Symbol alpha_symbol;
+public class AlphaSymbolCheckerTest {
+    AlphaSymbolChecker alphaSymbolChecker;
     @Before
     public void setUp(){
-        System.out.println("Before");
-        alpha_symbol= new Alpha_Symbol();
+        alphaSymbolChecker= new AlphaSymbolChecker();
     }
     @After
     public void tearDown(){
-        System.out.println("After");
-        alpha_symbol=null;
+        alphaSymbolChecker=null;
     }
     @Test
     public void checkGivenInputSmallLetter(){
-        String result=Alpha_Symbol.Check_Input('a');
+        String result= AlphaSymbolChecker.Check('a');
         assertEquals("The given input is small letter",result);
+        assertNotNull(alphaSymbolChecker.Check('a'));
     }
     @Test
     public void checkGivenInputCapitalLetter(){
-        String result=Alpha_Symbol.Check_Input('A');
+        String result= AlphaSymbolChecker.Check('A');
         assertEquals("The given input is Capital letter",result);
+        assertNotNull(alphaSymbolChecker.Check('A'));
     }
     @Test
     public void checkGivenInputDigit(){
-        String result= Alpha_Symbol.Check_Input('5');
+        String result= AlphaSymbolChecker.Check('5');
         assertEquals("The given input is a digit", result);
     }
     @Test
     public void checkGivenInputSpecialCharacter(){
-        String result= Alpha_Symbol.Check_Input('@');
+        String result= AlphaSymbolChecker.Check('@');
         assertEquals("The given input is a special character", result);
+    }
+    @Test
+    public void ifGivenInputIsNullPrintError(){
+        String result= AlphaSymbolChecker.Check(' ');
+        assertEquals("The given input is empty", result);
     }
 }

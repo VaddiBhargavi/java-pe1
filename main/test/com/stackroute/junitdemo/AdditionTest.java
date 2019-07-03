@@ -11,7 +11,6 @@ public class AdditionTest {
         Addition addition;
         @Before
         public void setUp() {
-            System.out.println("Before");
             addition = new Addition();
         }
 

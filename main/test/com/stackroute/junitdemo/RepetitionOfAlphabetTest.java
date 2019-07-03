@@ -6,31 +6,31 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class Repeatition_AlphaTest {
-    Repeatition_Alpha repeatition_alpha;
+public class RepetitionOfAlphabetTest {
+    RepetitionOfAlphabet repetitionOfAlphabet;
     @Before
     public void setUp(){
         System.out.println("Before");
-        repeatition_alpha= new Repeatition_Alpha();
+        repetitionOfAlphabet = new RepetitionOfAlphabet();
     }
     @After
     public void tearDown(){
         System.out.println("After");
-        repeatition_alpha=null;
+        repetitionOfAlphabet =null;
     }
     @Test
     public void repeatitionOfWord(){
-        String result=Repeatition_Alpha.check(3,"book");
+        String result= RepetitionOfAlphabet.check(3,"book");
         assertEquals("bookookookook",result);
     }
     @Test
     public void givenInputStringEmptyPrintErrorMessage(){
-        String result=Repeatition_Alpha.check(3, " ");
+        String result= RepetitionOfAlphabet.check(3, " ");
         assertEquals("Error",result);
     }
     @Test
     public void givenInputNullPrintAsNull(){
-        String result= Repeatition_Alpha.check(3, null);
+        String result= RepetitionOfAlphabet.check(3, null);
         assertEquals("Returns null", result);
     }
 

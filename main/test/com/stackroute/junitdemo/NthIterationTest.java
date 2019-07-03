@@ -6,31 +6,30 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class N_IterationTest {
-    N_Iteration n_iteration;
+public class NthIterationTest {
+    NthIteration nthiteration;
     @Before
     public void setUp(){
-        System.out.println("Before");
-        n_iteration= new N_Iteration();
+        nthiteration = new NthIteration();
     }
     @After
     public void tearDown(){
-        System.out.println("After");
-        n_iteration=null;
+        nthiteration =null;
     }
     @Test
     public void givenNumberShouldPrintInPattern(){
-        String result=N_Iteration.Loop(3);
+        String result= NthIteration.Loop(3);
         assertEquals("122333",result);
+        assertNotNull(nthiteration.Loop(3));
     }
     @Test
     public void givenNumberIsZeroShouldPrintError(){
-        String result= N_Iteration.Loop(0);
+        String result= NthIteration.Loop(0);
         assertEquals("Error", result);
     }
     @Test
     public void givenNumberIsNegativeShouldPrintError(){
-        String result= N_Iteration.Loop(-1);
+        String result= NthIteration.Loop(-1);
         assertEquals("Error", result);
     }
 }

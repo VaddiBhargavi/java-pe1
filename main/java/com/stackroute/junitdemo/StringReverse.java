@@ -1,19 +1,19 @@
 package com.stackroute.junitdemo;
 
-public class String_Reverse {
+public class StringReverse {
    public static String reverseString(String givenInput)
     {
         String result="", reverse="";
         //If given input is empty
         if(givenInput==" ") {
             result += "Error";
-            return result.trim();
+
         }
         //If given input is null
         else if(givenInput==null)
         {
             result +="Returns null";
-            return result.trim();
+
         }
         else {
             //Gives the given string in reverse order
@@ -21,8 +21,8 @@ public class String_Reverse {
                 reverse = reverse + givenInput.charAt(i);
             }
             result += reverse;
-            return result.trim();
-        }
+
+        } return result.trim();
     }
 }
 

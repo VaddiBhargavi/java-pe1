@@ -6,31 +6,31 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class Vowel_ConsonantTest {
-    Vowel_Consonant vowel_consonant;
+public class VowelConsonantCheckerTest {
+    VowelConsonantChecker vowelconsonantChecker;
     @Before
     public void setUp(){
-        System.out.println("Before");
-        vowel_consonant= new Vowel_Consonant();
+       // System.out.println("Before");
+        vowelconsonantChecker = new VowelConsonantChecker();
     }
     @After
     public void tearDown(){
-        System.out.println("After");
-        vowel_consonant=null;
+        //System.out.println("After");
+        vowelconsonantChecker =null;
     }
     @Test
     public void checkGivenInputIsAVowel(){
-        String result=Vowel_Consonant.Check("a");
+        String result= VowelConsonantChecker.Check("a");
         assertEquals("vowels",result);
     }
     @Test
     public void checkGivenInputIsAConsonantLetter(){
-        String result=Vowel_Consonant.Check("S");
+        String result= VowelConsonantChecker.Check("S");
         assertEquals("Consonants",result);
     }
     @Test
     public void checkGivenInputIsNotAlphabet(){
-        String result= Vowel_Consonant.Check("5");
+        String result= VowelConsonantChecker.Check("5");
         assertEquals("digit", result);
     }
 }

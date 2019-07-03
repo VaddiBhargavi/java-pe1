@@ -6,33 +6,32 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class Even_OddTest {
-
-   Even_Odd even_odd;
+public class EvenOddCheckerTest {
+   EvenOddChecker evenOddChecker;
     @Before
     public void setUp(){
-        System.out.println("Before");
-        even_odd= new Even_Odd();
+      //  System.out.println("Before");
+        evenOddChecker = new EvenOddChecker();
     }
     @After
     public void tearDown(){
-        System.out.println("After");
-        even_odd=null;
+        //System.out.println("After");
+        evenOddChecker =null;
     }
     @Test
     public void givenNumberIsEvenShouldPrintJerry(){
-        String result=Even_Odd.Check(26);
+        String result= EvenOddChecker.Check(26);
         assertEquals("Jerry",result);
     }
     @Test
     public void givenNumberIsOddShouldPrintTom(){
-        String result=Even_Odd.Check(23);
+        String result= EvenOddChecker.Check(23);
         assertEquals("Tom",result);
+        assertNotNull(evenOddChecker.Check(23));
     }
     @Test
     public void givenNumberNotLiesInGivenLimitShouldPrintError(){
-        String result= Even_Odd.Check(45);
+        String result= EvenOddChecker.Check(45);
         assertEquals("Given number does not lies in given limit", result);
     }
-
 }

@@ -6,32 +6,31 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class PalindromeTest {
-    Palindrome palindrome;
+public class PalindromeCheckerTest {
+    PalindromeChecker palindromeChecker;
     @Before
     public void setUp(){
         System.out.println("Before");
-        palindrome= new Palindrome();
+        palindromeChecker = new PalindromeChecker();
     }
     @After
     public void tearDown(){
         System.out.println("After");
-        palindrome=null;
+        palindromeChecker =null;
     }
     @Test
-    public void palindromeResult(){
-        String result=Palindrome.Palindrome_Check(123);
-
+    public void checkGivenInputIsPalindromeOrNot(){
+        String result= PalindromeChecker.PalindromeCheck(123);
         assertEquals("Not palindrome",result);
     }
     @Test
-    public void checkwhetherSumIsGreaterThan25(){
-        String result=Palindrome.Palindrome_Check(1288821);
+    public void checkWhetherSumIsGreaterThan25(){
+        String result= PalindromeChecker.PalindromeCheck(1288821);
         assertEquals("28",result);
     }
     @Test
     public void checkWhetherSumIsLessThan25(){
-        String result= Palindrome.Palindrome_Check(128821);
+        String result= PalindromeChecker.PalindromeCheck(128821);
         assertEquals("20", result);
     }
 }

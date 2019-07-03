@@ -10,13 +10,10 @@ public class RandomNumberTest {
         RandomNumber randomNumber;
         @Before
         public void setUp(){
-            System.out.println("Before");
             randomNumber = new RandomNumber();
         }
-
         @After
         public void tearDown(){
-            System.out.println("After");
             randomNumber = null;
         }
         @Test
